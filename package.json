@@ -1,0 +1,43 @@
+{
+  "name": "parse-cli-arguments",
+  "description": "parse command line argument",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jsfi/parse-cli-arguments#readme",
+  "author": {
+    "name": "Martin Sachse",
+    "email": "martin.sachse@gmail.com",
+    "url": "http://jsfi.io"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/eslint/bin/eslint.js index.js lib/*.js && node node_modules/mocha/bin/mocha test/**/*_test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jsfi/parse-cli-arguments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jsfi/parse-cli-arguments/issues"
+  },
+  "license" : "MIT",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "keywords": [
+    "args",
+    "argv",
+    "arguments",
+    "cli",
+    "command",
+    "parse",
+    "parser"
+  ],
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "eslint": "^1.6.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^2.3.3"
+  }
+}
