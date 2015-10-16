@@ -48,7 +48,7 @@ let configuration = {
 
 ### options
 
-The options-array is a collection of options. If no option is set or none is configured as a `defaultOption` the collection will be extended by an catch-all option with the name `_args`.
+The options-array is a collection of options. If no option is set or none is configured as a `defaultOption` the collection will be extended by a catch-all option with the name `_args`.
 
 ### option
 
@@ -69,7 +69,7 @@ The shortest valid option is `{ flag: 'flag' }`. It is valid to set only the nam
 
 #### option.name
 
-This configuration sets the name of the property in the returned array.
+This configuration sets the name of the property in the returned object.
 
 #### option.flag
 
