@@ -121,5 +121,14 @@ This configuration sets the symbol that will stop the parsing of the passed argu
 
 This configuration sets the name of the property that contains all unparsed values.
 
+### debug
+
+This configuration activates warnings that are written to the console. This warnings notice the user of behaviors that could be misinterpreted as failure but work as intended.
+
+There are currently 3 different warnings:
+- "Option [option.name] has been overridden." - Triggered when an option is not configured as multiple but multiple values were passed. Only the last passed value will be returned.
+- "Alias [aliases] ignored because not all parts could be identified." - Triggered when aliases are grouped, e.g. `-abc`, and not all aliases are configured. In this case the group will be treated as a value.
+- "Value [val] is discarded because [option.name] is configured as Boolean." - If a flag or alias is configured as Boolean but passed with a value, e.g. `-test="123"`, the value will be ignored.
+
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add tests for any new or changed functionality. Lint and test your code using `npm test`.
