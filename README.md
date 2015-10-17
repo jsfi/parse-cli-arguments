@@ -2,6 +2,8 @@
 
 > Parses passed cli arguments to an object
 
+![dependencies](https://david-dm.org/jsfi/parse-cli-arguments.svg)
+
 ## Install
 
 This module requires node `>=4.0.0`
