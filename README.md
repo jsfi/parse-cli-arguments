@@ -23,14 +23,14 @@ let args = require('parse-cli-arguments')(configuration);
 ```js
 //node index.js test -a
 let args = require('parse-cli-arguments')({
-    options: [
-        { name: 'option', defaultOption: true },
-        { alias: 'a', name: 'alias' }
-    ]
+    options: {
+        optionA: { defaultOption: true },
+        aliasB: { alias: 'a' }
+    }
 });
 /*args = {
-    option: 'test',
-    alias: true
+    optionA: 'test',
+    aliasB: true
 }*/
 ```
 
@@ -38,40 +38,36 @@ let args = require('parse-cli-arguments')({
 
 ```js
 let configuration = {
-    options: [],
-    flagSymbol: '--',
-    aliasSymbol: '-',
-    argumentSymbol: '=',
-    stopArgument: '--',
-    restArguments: 'argv',
-    debug: false
+    options: {},  //Object
+    flagSymbol: '--', //String
+    aliasSymbol: '-', //String
+    argumentSymbol: '=', //String
+    stopArgument: '--', //String
+    restArguments: 'argv', //String
+    debug: false //Boolean
 }
 ```
 
 ### options
 
-The options-array is a collection of options. If no option is set or none is configured as a `defaultOption` the collection will be extended by a catch-all option with the name `_args`.
+The options-object is a collection of options. If no option is set or none is configured as a `defaultOption` the collection will be extended by a catch-all option with the name `_args`.
 
 ### option
 
 ```js
 let option = {
-    name: 'option', //String
-    flag: 'flag', //String
+    flag: 'flag', //String or true
     alias: 'f', //String
     defaultOption: true, //Boolean
     multiple: true, //Boolean
     defaultValue: true, //any value
     type: '', //String
-    transform: function(val) { return parseInt(val); }
+    transform: function(val) { return parseInt(val); }, //Function
+    name: 'propName', //String
 }
 ```
 
-The shortest valid option is `{ flag: 'flag' }`. It is valid to set only the name, but this option would always return `undefined` as no value can be assigned to the option without configuring `flag`, `alias` or `defaultValue`.
-
-#### option.name
-
-This configuration sets the name of the property in the returned object.
+The shortest valid option is `flag: { flag: true }`. It is valid to set only an empty object, but this option would always return `undefined` as no value can be assigned to the option without configuring `flag`, `alias` or `defaultValue`.
 
 #### option.flag
 
@@ -102,6 +98,10 @@ This configuration is only used to distinguish between Booleans and all other va
 #### option.transform
 
 This configuration allows to define a function that modifies the value before it is added to the returned object. Three arguments will be passed to the function: the passed value, the matched option and a reference to lodash.
+
+#### option.propName
+
+This configuration sets the name of the property in the returned object. It will default to the property name in the configuration object.
 
 ### flagSymbol
 

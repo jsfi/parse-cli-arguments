@@ -5,7 +5,7 @@ const parser = require('../../');
 /*global describe*/
 /*global it*/
 
-let config = { options: [{ alias: 't', name: 'test', transform: (val, arg, _) => `${_.capitalize(arg.name)}: ${val}` }] };
+let config = { options: { test: { alias: 't', transform: (val, arg, _) => `${_.capitalize(arg.propName)}: ${val}` } } };
 
 describe('transform config', function() {
     it('alias with argument', function () {

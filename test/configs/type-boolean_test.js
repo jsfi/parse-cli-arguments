@@ -5,10 +5,10 @@ const parser = require('../../');
 /*global describe*/
 /*global it*/
 
-let config = { options: [
-    { alias: 't', name: 'test', type: 'Boolean' },
-    { alias: 'p', name: 'prueba', type: 'Boolean', defaultValue: true }
-] };
+let config = { options: {
+    test: { alias: 't', type: 'Boolean' },
+    prueba: { alias: 'p', type: 'Boolean', defaultValue: true }
+} };
 
 describe('type config', function() {
     it('empty arguments', function () {

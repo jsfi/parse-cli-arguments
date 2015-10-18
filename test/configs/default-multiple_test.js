@@ -5,7 +5,7 @@ const parser = require('../../');
 /*global describe*/
 /*global it*/
 
-let config = { options: [{ flag: 'test', defaultOption: true, multiple: true }] };
+let config = { options: { test: { flag: true, defaultOption: true, multiple: true } } };
 
 describe('flag default multiple config', function() {
     it('empty arguments', function () {

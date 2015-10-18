@@ -5,10 +5,10 @@ const parser = require('../../');
 /*global describe*/
 /*global it*/
 
-let config = { options: [
-    { alias: 't', name: 'test' },
-    { alias: 'p', name: 'prueba' }
-] };
+let config = { options: {
+    test: { alias: 't' },
+    prueba: { alias: 'p' }
+} };
 
 describe('multiple alias config', function() {
     it('empty arguments', function () {

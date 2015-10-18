@@ -1,7 +1,7 @@
 {
   "name": "parse-cli-arguments",
   "description": "parse command line argument",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/jsfi/parse-cli-arguments#readme",
   "author": {
     "name": "Martin Sachse",

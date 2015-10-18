@@ -6,10 +6,10 @@ const parser = require('../../');
 /*global it*/
 
 let config = {
-    options: [
-        { flag: 'flag' },
-        { alias: 'a', name: 'alias' }
-    ]
+    options: {
+        flag: { flag: true },
+        alias: { alias: 'a' }
+    }
 };
 
 describe('stop-parsing config', function() {
