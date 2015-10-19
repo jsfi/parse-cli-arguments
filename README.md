@@ -63,7 +63,7 @@ let option = {
     defaultValue: true, //any value
     type: '', //String
     transform: function(val) { return parseInt(val); }, //Function
-    name: 'propName', //String
+    propName: 'propName', //String
 }
 ```
 
@@ -71,11 +71,11 @@ The shortest valid option is `flag: { flag: true }`. It is valid to set only an 
 
 #### option.flag
 
-This configuration sets the name of the flag. If the name of the option is not set, the name of the flag will be used in the returned object.
+This configuration sets the name of the flag. If it is set to `true` the flag will be equal to the property name of the option.
 
 #### option.alias
 
-This configuration sets the name of the alias. It must only consist of one character. The name or the flag of the option is necessary.
+This configuration sets the name of the alias. It must only consist of one character.
 
 #### option.defaultOption
 
