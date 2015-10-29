@@ -1,6 +1,6 @@
 {
   "name": "parse-cli-arguments",
-  "description": "parse command line argument",
+  "description": "parses command line arguments",
   "version": "1.0.1",
   "homepage": "https://github.com/jsfi/parse-cli-arguments#readme",
   "author": {
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/jsfi/parse-cli-arguments/issues"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "engines": {
     "node": ">=4.0.0"
   },
